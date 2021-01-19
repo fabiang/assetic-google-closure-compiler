@@ -18,7 +18,7 @@ env:
 
 php:
   - 7.4
-  - 8.0
+#  - 8.0
 
 install:
   - composer update --no-interaction --prefer-stable --prefer-dist --no-suggest --no-scripts --no-plugins $PREFER_LOWEST
