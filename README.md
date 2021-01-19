@@ -1,5 +1,7 @@
 # fabiang/assetic-google-closure-compiler
 
+[![Build Status](https://travis-ci.com/fabiang/assetic-google-closure-compiler.svg?branch=master)](https://travis-ci.com/fabiang/assetic-google-closure-compiler)
+
 ## Installation
 
 New to Composer? Read the [introduction](https://getcomposer.org/doc/00-intro.md#introduction). Run the following Composer command:
