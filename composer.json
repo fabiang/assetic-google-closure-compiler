@@ -1,0 +1,26 @@
+{
+    "name": "fabiang/assetic-google-closure-compiler",
+    "description": "Google Closure Compiler for the PHP assetic library (Java/JAR version)",
+    "type": "library",
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Fabian Grutschus",
+            "email": "f.grutschus@lubyte.de"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Assetic\\Filter\\GoogleClosure\\": "src/"
+        }
+    },
+    "require": {
+        "assetic/framework": "^2.0"
+    },
+    "require-dev": {
+        "packagelist/closurecompiler-bin": "^2016.02",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "phpunit/phpunit": "^9.5"
+    }
+}

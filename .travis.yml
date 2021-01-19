@@ -1,0 +1,30 @@
+language: php
+
+sudo: false
+
+git:
+  depth: 2
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+env:
+  global:
+    - XDEBUG_MODE=coverage
+  matrix:
+    - PREFER_LOWEST=""
+    - PREFER_LOWEST="--prefer-lowest"
+
+php:
+  - 7.4
+  - 8.0
+
+install:
+  - composer update --no-interaction --prefer-stable --prefer-dist --no-suggest --no-scripts --no-plugins $PREFER_LOWEST
+
+script:
+  - ./vendor/bin/phpunit --coverage-clover=build/logs/clover.xml
+
+matrix:
+  fast_finish: true
