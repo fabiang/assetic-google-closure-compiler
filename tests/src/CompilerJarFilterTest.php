@@ -20,7 +20,10 @@ final class CompilerJarFilterTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->compiler = new CompilerJarFilter('vendor/packagelist/closurecompiler-bin/bin/compiler.jar', CompilerJarFilter::DEFAULT_JAVA_PATH);
+        $this->compiler = new CompilerJarFilter(
+            'vendor/packagelist/closurecompiler-bin/bin/compiler.jar',
+            CompilerJarFilter::DEFAULT_JAVA_PATH
+        );
     }
 
     /**
