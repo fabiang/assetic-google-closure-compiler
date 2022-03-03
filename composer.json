@@ -16,8 +16,8 @@
         }
     },
     "require": {
-        "php": "^7.4 || ^8.0",
-        "assetic/framework": "^2.0"
+        "php": "^7.4 || 8.0.* || 8.1.*",
+        "assetic/framework": "^2.0 || ^3.0"
     },
     "require-dev": {
         "packagelist/closurecompiler-bin": "^2016.02",
