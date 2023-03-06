@@ -24,12 +24,14 @@ jobs:
           composer-args: ''
         - version: '8.1'
           composer-args: ''
+        - version: '8.2'
+          composer-args: ''
         prefer-lowest: ['', '--prefer-lowest']
 
     name: Integration Tests - PHP ${{ matrix.php.version }} ${{ matrix.prefer-lowest }}
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Install PHP
       uses: shivammathur/setup-php@v2
@@ -43,12 +45,13 @@ jobs:
 
     - name: Cache Composer packages
       id: composer-cache
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: vendor
         key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
           ${{ runner.os }}-php-
+
     - name: Install dependencies
       run: composer update --prefer-dist --no-progress ${{ matrix.prefer-lowest }} ${{ matrix.php.composer-args }}
 

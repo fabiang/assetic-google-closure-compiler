@@ -16,14 +16,15 @@
         }
     },
     "require": {
-        "php": "^7.4 || 8.0.* || 8.1.*",
+        "php": "^7.4 || ~8.0.0 || ~8.1.0 || ~8.2.0",
         "assetic/framework": "^2.0 || ^3.0"
     },
     "require-dev": {
         "packagelist/closurecompiler-bin": "^2016.02",
         "phpspec/prophecy-phpunit": "^2.0",
-        "phpunit/phpunit": "^9.5",
-        "symfony/process": "^6.0 || ^5.3.7 || ^4.4.30"
+        "phpunit/phpunit": "^9.6.4",
+        "symfony/process": "^6.0 || ^5.3.7 || ^4.4.30",
+        "phpspec/prophecy": "^1.17"
     },
     "scripts": {
         "phpunit": "phpunit",
