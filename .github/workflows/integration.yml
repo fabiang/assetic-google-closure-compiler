@@ -3,12 +3,7 @@ name: Integration Tests
 ## Yes!
 ## Honstly our "unit tests" is an integration test
 
-on:
-  push:
-    branches:
-    - '*'
-    pull_request:
-    - '*'
+on: [push, pull_request]
 
 jobs:
   unittest:
@@ -25,6 +20,8 @@ jobs:
         - version: '8.1'
           composer-args: ''
         - version: '8.2'
+          composer-args: ''
+        - version: '8.3'
           composer-args: ''
         prefer-lowest: ['', '--prefer-lowest']
 
