@@ -7,10 +7,9 @@ namespace Assetic\Filter\GoogleClosure;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Assetic\Contracts\Asset\AssetInterface;
+use PHPUnit\Framework\Attributes\CoversClass;
 
-/**
- * @coversDefaultClass Assetic\Filter\GoogleClosure\CompilerJarFilter
- */
+#[CoversClass(CompilerJarFilter::class)]
 final class CompilerJarFilterTest extends TestCase
 {
 
@@ -26,16 +25,13 @@ final class CompilerJarFilterTest extends TestCase
         );
     }
 
-    /**
-     * @coversNothing
-     */
     public function testFilterDump(): void
     {
         $output     = [];
         $returnCode = 0;
         exec('which java', $output, $returnCode);
         if (0 !== $returnCode) {
-            $this->markTestSkipped('Java is not installed');
+            $this->markTestSkipped('Java binary not found');
         }
 
         $asset = $this->prophesize(AssetInterface::class);
@@ -48,5 +44,4 @@ final class CompilerJarFilterTest extends TestCase
 
         $this->compiler->filterDump($asset->reveal());
     }
-
 }

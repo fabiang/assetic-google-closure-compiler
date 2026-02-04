@@ -1,3 +1,6 @@
 vendor/
 .phpunit.result.cache
+.phpunit.cache/
 composer.lock
+*.prog
+*.bak
